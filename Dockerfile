@@ -8,6 +8,6 @@ RUN npm install -g pm2
 RUN pm2 --version
 
 VOLUME /var/app
-WORKSPACE /var/app
+WORKDIR /var/app
 
 EXPOSE 3000
