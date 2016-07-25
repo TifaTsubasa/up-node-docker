@@ -5,9 +5,12 @@ RUN yum install -y -q nodejs
 RUN yum install -y -q git
 
 RUN npm install -g pm2
-RUN pm2 --version
 
 VOLUME /var/app
 WORKDIR /var/app
 
 EXPOSE 3000
+
+ENTRYPOINT [ "pm2", "start", "--no-daemon"]
+CMD ["?"]
+
