@@ -4,6 +4,11 @@ RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash -
 RUN yum install -y -q nodejs
 RUN yum install -y -q git
 
+RUN alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
+
 RUN npm install -g pm2
 
 VOLUME /var/app
