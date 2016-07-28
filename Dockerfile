@@ -16,6 +16,6 @@ WORKDIR /var/app
 
 EXPOSE 3000
 
-ENTRYPOINT [ "pm2", "start", "--no-daemon"]
+ENTRYPOINT [ "pm2", "start", "--no-daemon", "--name=app"]
 CMD ["?"]
 
