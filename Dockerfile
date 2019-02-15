@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 RUN yum install -y -q nodejs
 RUN yum install -y -q git
 
